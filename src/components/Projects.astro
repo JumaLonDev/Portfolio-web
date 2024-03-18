@@ -1,0 +1,86 @@
+---
+import AstroIcon from '@/icons/AstroIcon.astro'
+import GitHub from "@/icons/GitHub.astro"
+import NextJS from "@/icons/NextJS.astro"
+import Tailwind from "@/icons/Tailwind.astro"
+import Link from "@/icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  ASTRO: {
+    name: 'ASTRO',
+    class: 'bg-purple-200/90 text-black',
+    icon: AstroIcon
+  }
+}
+const PROJECTS = [
+  {
+    title: "Portfolio",
+    description:
+      "Sitio web donde me puedes conocer un poco más de mí, de mis habilidades y proyectos.",
+    link: "#",
+    github: "https://github.com/cripiii25",
+    image: "/projects/portfolio.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Sitio web donde me puedes conocer un poco más de mí, de mis habilidades y proyectos.",
+    link: "#",
+    github: "https://github.com/cripiii25",
+    image: "/projects/portfolio.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  }
+]
+---
+
+<div class="flex flex-row justify-evenly gap-10 flex-wrap">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <div class="sm:w-80 w-full p-2 flex flex-col gap-2 transition scale-100 hover:scale-105">
+        <img class="rounded transition hover:scale-105" src={image} alt={`Imagen del proyecto ${title}`}>
+        <h3 class="text-xl font-semibold text-white/90">{title}</h3>
+        <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={` text-white/90 flex items-center justify-center gap-x-2 rounded text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-gray-400">{description}</p>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+    ))
+  }
+</div>
+

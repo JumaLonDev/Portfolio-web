@@ -1,8 +1,38 @@
 ---
+import SectionContainer from '@/components/SectionContainer.astro';
+import Hero from '@/components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
+import Projects from '@/components/Projects.astro'
+import BriefCase from '@/icons/Briefcase.astro'
+import Code from '@/icons/Code.astro'
+import Experience from '@/components/Experience.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero>
+				</slot>
+			</Hero>
+		</SectionContainer>
+
+		<div class="space-y-24">
+			<SectionContainer id="experiencia">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white">
+					<BriefCase class="size-8"/>
+					Experiencia Laboral
+				</h2>
+				<Experience />
+			</SectionContainer>
+			<SectionContainer id="proyectos">
+				<h2
+					class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white"
+				>
+					<Code class="size-7" />
+					Proyectos
+				</h2>
+				<Projects />
+			</SectionContainer>
+		</div>
 	</main>
 </Layout>
