@@ -48,9 +48,9 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500");
+              item.classList.add("text-purple-500");
             } else {
-              item.classList.remove("text-yellow-500");
+              item.classList.remove("text-purple-500");
             }
           });
         }

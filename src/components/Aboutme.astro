@@ -1,0 +1,19 @@
+---
+import { personInfo } from "../../personInfo";
+---
+<article class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row p-4">
+  <div class="[&>p]:mb-4 [&>p>strong]:text-purple-200/90 [&>p>strong]:font-normal text-pretty order-2 md:order-1">
+    <p>
+      Me llamo Juan Manuel. Empecé en el mundo del desarrollo en el 2020 a la edad de 17 años<strong
+        > participando en maratones de programación</strong
+      >.
+    </p>
+
+    <p>
+      Hoy en día me dedico al <strong
+        > Desarrollo Web</strong
+      >. Donde cada día me levanto con el entusiasmo de seguir mejorando mis habilidades.
+    </p>
+  </div>
+  <img  width="200" height="200" src="/Me.webp" alt={personInfo.name} class="order-1 rounded-lg transition ease-in-out hover:scale-105 hover:rotate-3 md:order-2 shadow-lg hover:shadow-purple-400" style="object-position: 50% 50%">
+</article>

@@ -45,11 +45,11 @@ const PROJECTS = [
 ]
 ---
 
-<div class="flex flex-row justify-evenly gap-10 flex-wrap">
+<div class="flex flex-row justify-evenly gap-10 flex-wrap p-3">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <div class="sm:w-80 w-full p-2 flex flex-col gap-2 transition scale-100 hover:scale-105">
-        <img class="rounded transition hover:scale-105" src={image} alt={`Imagen del proyecto ${title}`}>
+      <div class="sm:w-80  w-full p-2 flex flex-col gap-2 transition scale-100 hover:scale-105">
+        <img class="rounded transition" src={image} alt={`Imagen del proyecto ${title}`}>
         <h3 class="text-xl font-semibold text-white/90">{title}</h3>
         <ul class="flex flex-row mb-2 gap-x-2">
           {tags.map((tag) => (

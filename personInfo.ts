@@ -1,6 +1,6 @@
 export const personInfo = {
   name: 'Juan Manuel', 
-  linkedin: 'linkedin.com/in/juan-manuel-londoño-gonzález-76759829b/',
+  linkedin: 'https://linkedin.com/in/juan-manuel-londoño-gonzález-76759829b/',
   github: 'https://github.com/cripiii25',
   email: 'mailto:juanlondonoierml@gmail.com'
 }

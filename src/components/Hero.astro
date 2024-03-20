@@ -1,44 +1,46 @@
 ---
-import Mail from '@/icons/Mail.astro'
+import Mail from "@/icons/Mail.astro";
 import Badge from "@/icons/Badge.astro";
-import SocialPill from '@/components/SocialPill.astro'
-import LinkedIn from '@/icons/LinkedIn.astro'
+import SocialPill from "@/components/SocialPill.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
 import { personInfo } from "../../personInfo";
 ---
 
-<div class='max-w-xl'>
-  <div class="flex gap-4 mb-4">
+<div class='w-full flex flex-col md:flex-row'>
+  <div class="w-full">
+    <h1 class='text-4xl font-bold tracking-tight text-white sm:text-5xl'>
+      Hola, soy Juan Manuel
+    </h1>
+    <p
+      class='mt-6 text-xl [&>strong]:text-purple-300 [&>strong]:font-semibold text-gray-300'
+    >
+      +6 meses de experiencia. <strong>Desarrollador web.</strong> De Medellín, Colombia.
+      Especializado en desarrollar Aplicaciones Web.
+    </p>
+  </div>
+  <div class='flex flex-col md:flex-col p-4 gap-4 w-full justify-center items-center'>
     <img
-      class="rounded-full shadow-lg size-16"
-      src="https://robohash.org/Juan"
+      class='rounded-full shadow-lg size-28'
+      src='https://robohash.org/Juan'
       alt={personInfo.name}
     />
     <a
       href={personInfo.linkedin}
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+      target='_blank'
+      rel='noopener'
+      class='flex items-center transition md:justify-center md:hover:scale-105'
     >
       <Badge>Disponible para trabajar</Badge>
     </a>
+    <nav class='flex flex-wrap gap-4 mt-8'>
+      <SocialPill href={personInfo.email}>
+        <Mail />
+        Contáctame
+      </SocialPill>
+      <SocialPill href={personInfo.linkedin}>
+        <LinkedIn />
+        LinkedIn
+      </SocialPill>
+    </nav>
   </div>
-  <h1 class='text-4xl font-bold tracking-tight text-white sm:text-5xl'>
-    Hola, soy Juan Manuel
-  </h1> 
-  <p
-    class='mt-6 text-xl [&>strong]:text-purple-300 [&>strong]:font-semibold text-gray-300'
-  >
-    +6 meses de experiencia. <strong>Desarrollador web.</strong> De Medellín, Colombia.
-    Especializado en desarrollar Aplicaciones Web.
-  </p>  
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href={personInfo.email}>
-      <Mail />
-      Contáctame
-    </SocialPill>
-    <SocialPill href={personInfo.linkedin}>
-      <LinkedIn />
-      LinkedIn
-    </SocialPill>
-  </nav>
 </div>
