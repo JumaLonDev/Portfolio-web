@@ -1,16 +1,18 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import SectionContainer from '@/components/SectionContainer.astro';
 import Hero from '@/components/Hero.astro';
-import Layout from '../layouts/Layout.astro';
+import Experience from '@/components/Experience.astro';
 import Projects from '@/components/Projects.astro'
+import AboutMe from '@/components/Aboutme.astro'
+import Tools from '@/components/Tools.astro'
 import BriefCase from '@/icons/Briefcase.astro'
 import Code from '@/icons/Code.astro'
 import UserIcon from '@/icons/UserIcon.astro'
-import Experience from '@/components/Experience.astro';
-import AboutMe from '@/components/Aboutme.astro'
+import ToolIcon from '@/icons/ToolIcon.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Porfolio de Juan Manuel - Programador y Desarrollador web" description='Especializado en crear aplicaciones web.'>
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
 			<Hero>
@@ -42,6 +44,14 @@ import AboutMe from '@/components/Aboutme.astro'
 					Sobre Mi
 				</h2>
 				<AboutMe />
+			</SectionContainer>
+
+			<SectionContainer id="herramientas">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white">
+					<ToolIcon class="size-7" />
+					Herramientas
+				</h2>
+				<Tools />
 			</SectionContainer>
 		</div>
 	</main>
