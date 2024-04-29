@@ -1,6 +1,6 @@
 export const personInfo = {
   name: 'Juan Manuel', 
-  linkedin: 'https://linkedin.com/in/juan-manuel-londoño-gonzález-76759829b/',
+  linkedin: 'https://www.linkedin.com/in/jumalondev/',
   github: 'https://github.com/JumaLonDev',
   email: 'mailto:jumalomdev@gmail.com'
 }
