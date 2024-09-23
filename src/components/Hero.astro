@@ -3,6 +3,7 @@ import Mail from "@/icons/Mail.astro";
 import Badge from "@/icons/Badge.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
+import CvPage from "@/icons/CvPage.astro";
 import { personInfo } from "../../personInfo";
 ---
 
@@ -14,7 +15,7 @@ import { personInfo } from "../../personInfo";
     <p
       class='mt-6 text-xl [&>strong]:text-purple-300 [&>strong]:font-semibold text-gray-300'
     >
-      +6 meses de experiencia. <strong>Desarrollador web.</strong> De Medellín, Colombia.
+      1+ año de experiencia. <strong>Desarrollador web.</strong> De Medellín, Colombia.
       Especializado en desarrollar Aplicaciones Web.
     </p>
   </div>
@@ -40,6 +41,10 @@ import { personInfo } from "../../personInfo";
       <SocialPill href={personInfo.linkedin}>
         <LinkedIn />
         LinkedIn
+      </SocialPill>
+      <SocialPill href={personInfo.cv}>
+        <CvPage />
+        CV
       </SocialPill>
     </nav>
   </div>
