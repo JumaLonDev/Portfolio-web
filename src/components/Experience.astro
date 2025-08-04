@@ -1,17 +1,25 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import { date } from "astro/zod";
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCIE = [
   {
-    date: "Mayo 2023",
+    date: "Mayo 2023 - Septiembre 2023",
     title: "Desarrollador Web",
     company: "Empresas Públicas de Medellín",
     description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora la entrega de Informes de nómina.",
+      "Encargado del diseño, desarrollo y mantenimiento de componentes y utilidades para aplicaciones web internas. Contribuí a la optimización en la entrega de informes de nómina y la documentación técnica del sistema.",
   },
-]
+  {
+    date: "Marzo 2025 - Actualidad",
+    title: "Desarrollador Python",
+    company: "Cueros Vélez S.A.S",
+    description:
+      "Responsable del desarrollo, despliegue y mantenimiento de una aplicación de escritorio en Python, diseñada para automatizar la documentación de salida de mercancía para clientes nacionales e internacionales. La solución ha mejorado significativamente la eficiencia operativa del área logística.",
+  },
+];
 ---
 
-<ol class="relative mt-16">
+<ol class='relative mt-16'>
   {
     EXPERIENCIE.map((experiencie) => (
       <li>
